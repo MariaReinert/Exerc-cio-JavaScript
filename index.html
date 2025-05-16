@@ -1,0 +1,76 @@
+<!-- Padrão de como começar um html -->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tarefa</title>
+</head>
+
+<body>
+
+    <!-- Exercício 1 -->
+    <!-- AQUI VOCÊ ESTÁ CRIANDO UM BOTÃO QUE AO SER CLICADO (ONCLICK) VOCÊ EXIBE UMA FUNÇÃO 
+      ALERT É COMO SE FOSSE UM SYSTEM.OUT.PRINT NO JAVA, ELE EXIBE UMA TELINHA 
+    <button onclick="alert('Olá!')">Clique aqui</button>
+
+
+    <br><br>
+    <!-- ####################IMPORTANTE################# -->
+    <!-- ID É UTILIZADO NA IDENTIFICAÇÃO DO SEU elemento
+    PQ USAR ELE? PARA PEGAR O SEU ELEMENTO NO JAVASCRIPT E FAZER ALGO COM ELE -->
+
+    <!-- Exercício 2
+     AQUI VOCÊ SÓ CONSEGUE VER SE CLICAR F12 E IR EM console
+     MESMA COISA, MAS VOCÊ CRIOU UM INPUT(PARA RECEBER O TEXTO)
+     AI VOCÊ OLHA ALI EM BAIXO MOZÃO VAI TER "mostrarValor"   É UMA FUNÇÃO CRIADA QUE MOSTRA NO CONSOLE OQ VC DIGITA -->
+    <input type="text" id="meuInput">
+    <button onclick="mostrarValor()">Console</button>
+
+    <!-- ONCLICK CHAMA UMA FUNÇÃO DE JAVASCRIPT -->
+
+    <br><br>
+
+    <!-- Exercício 3 -->
+    <!-- aqui amor, se vc ver la em baixo tem uma função criada chamada "alterarParagrafo"
+     tem outros jeitos de trocar o valor -->
+    <!-- AMO VOCÊ -->
+    <p id="meuParagrafo">Texto original</p>
+    <button onclick="alterarParagrafo()">TEXTO TESTE</button>
+
+    <br><br>
+
+    <!-- Exercício 4 -->
+    <!-- mesma coisa que o de baixo amor, mas ele troca a cor da div todinhaaa -->
+    <div id="meuDiv" style="background-color: gray;">
+        EXEMPLO
+    </div>
+    <button onclick="mudarCor()">Mudar cor</button>
+
+    <script>
+
+        function mostrarValor() {
+            var valor = document.getElementById('meuInput').value;
+            console.log(valor);
+        }
+
+        function alterarParagrafo() {
+            //Troca o texto antigo para o novo, no f12 você consegue identificar a troca
+            document.getElementById('meuParagrafo').innerText = 'novo texto teste!';
+
+        }
+
+        function mudarCor() {
+            var elemento = document.getElementById('meuDiv');
+            //crio uma variavel ELEMENTO e armazeno o valor dela
+            elemento.style.backgroundColor = 'red';
+            //console.log(elemento);
+
+
+        }
+    </script>
+
+</body>
+
+</html>
